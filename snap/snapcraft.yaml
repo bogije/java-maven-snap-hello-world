@@ -1,0 +1,19 @@
+name: java-maven-snap-hello-world
+version: '1.0.0'
+summary: Hello World java maven
+description: |
+  Simple Hello World delivered with java in snap package.
+
+apps:
+  helloworld:
+    command: helloworld
+    environment:
+      JAVA_HOME: $SNAP/usr/lib/jvm/java-8-openjdk-amd64
+      PATH: $JAVA_HOME/jre/bin:$PATH
+    aliases: [helloworld]
+
+parts:
+  java-maven-snap-hello-world:
+    source: 
+    plugin: dump
+    stage-packages: [openjdk-8-jre]
