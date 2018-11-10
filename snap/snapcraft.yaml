@@ -6,7 +6,7 @@ description: |
 
 apps:
   helloworld:
-    command: helloworld
+    command: ../parts/java-maven-snap-hello-world/build/target/dist/bin/hello-world.sh
     environment:
       JAVA_HOME: $SNAP/usr/lib/jvm/java-8-openjdk-amd64
       PATH: $JAVA_HOME/jre/bin:$PATH
@@ -16,4 +16,5 @@ parts:
   java-maven-snap-hello-world:
     plugin: maven
     source: .
+    maven-options: [package]
     stage-packages: [openjdk-8-jre]
