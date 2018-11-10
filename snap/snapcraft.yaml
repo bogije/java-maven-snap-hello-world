@@ -1,12 +1,12 @@
 name: java-maven-snap-hello-world
-version: '1.0.0'
+version: '1.0.1'
 summary: Hello World java maven
 description: |
   Simple Hello World delivered with java in snap package.
 
 apps:
   helloworld:
-    command: ../parts/java-maven-snap-hello-world/build/target/dist/bin/hello-world.sh
+    command: hello-world.sh
     environment:
       JAVA_HOME: $SNAP/usr/lib/jvm/java-8-openjdk-amd64
       PATH: $JAVA_HOME/jre/bin:$PATH
