@@ -14,6 +14,6 @@ apps:
 
 parts:
   java-maven-snap-hello-world:
-    source: 
-    plugin: dump
+    plugin: maven
+    source: .
     stage-packages: [openjdk-8-jre]
